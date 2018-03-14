@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CRUD OPERATION</title>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+      <link rel="stylesheet" type="text/css" href="/stylesheet/app.css" />
+   </head>
+   <body>
+      <div style="margin-top:70px;" class="ui main text container segment">
+         <div class="ui huge header">Edit <%= student.name %> </div>
+         <form class="ui form"  action="/students/<%= student._id %>?_method=PUT" method="POST">
+            <div class="field">
+               <label for="">Id</label>
+               <input type="text" name="id" value="<%= student.id %>"  />
+            </div>
+            <div class="field">
+               <label for="">Name</label>
+               <input type="text" name="name" value="<%= student.name %>" >
+            </div>
+            <div class="field">
+               <label for="">Deptarment Name</label>
+               <input type="text" name="dept" value="<%= student.dept %>" >
+            </div>
+            <input  class="ui grey button" type="submit" name="" value="Submit">
+            <a class="ui right labeled icon button" href="/students">Home <i class="left arrow icon"></i></a>
+         </form>
+      </div>
+   </body>
+</html>

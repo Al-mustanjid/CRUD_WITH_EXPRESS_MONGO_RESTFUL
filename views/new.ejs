@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CRUD OPERATION</title>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+      <link rel="stylesheet" type="text/css" href="/stylesheet/app.css" />
+   </head>
+   <body>
+      <div style="margin-top:70px;" class="ui main text container segment">
+         <div class="ui huge header">Fill the details</div>
+         <form class="ui form"  action="/students" method="POST">
+            <div class="field">
+               <label for="">Id</label>
+               <input type="text" name="id" value="" placeholder="151-**-**" />
+            </div>
+            <div class="field">
+               <label for="">Name</label>
+               <input type="text" name="name" value="" placeholder="eg.fullname">
+            </div>
+            <div class="field">
+               <label for="">Deptarment Name</label>
+               <input type="text" name="dept" value="" placeholder="name of the dept">
+            </div>
+            <input  class="ui green button" type="submit" name="" value="Submit">
+            <a style="display:inline;" class="ui right labeled icon button" href="/students">Home <i class="left arrow icon"></i></a>
+         </form>
+      </div>
+   </body>
+</html>

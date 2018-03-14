@@ -1,0 +1,26 @@
+<!-- <%= students %> -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+<div style="margin-top:70px;" class="ui main text container segment">
+   <h2 style="text-align:center"> All Students List</h2>
+   <table border="2px" class="ui celled table">
+      <tr>
+         <td><strong>ID</strong></td>
+         <td><strong>Name</strong></td>
+         <td><strong>Department</strong></td>
+         <td><strong>Activity</strong></td>
+      </tr>
+      <% students.forEach(function(student){ %>
+      <tr>
+         <td> <%= student.id %> </td>
+         <td> <%= student.name %> </td>
+         <td> <%= student.dept %> </td>
+         <td><a class="ui right labeled icon button" href="/students/<%= student._id %>">
+            <i class="right arrow icon"></i>View</a>
+         </td>
+      </tr>
+      <% }) %>
+   </table>
+   <a class="ui bottom attached button" tabindex="0" href="/students/new">
+      <h3>Create New Student</h3>
+   </a>
+</div>

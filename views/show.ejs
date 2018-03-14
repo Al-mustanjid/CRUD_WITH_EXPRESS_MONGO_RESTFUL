@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+<div style="margin-top:70px;" class="ui main text container segment">
+   <div class="ui segment">
+      <h2 style="text-align:center;">Individual Student Info</h2>
+      <div style="margin: 10px;" class="ui secondary segment">
+         <p><strong>Student ID: </strong><%= student.id %></p>
+         <p><strong>Student Name: </strong><%= student.name %></p>
+         <p><strong>Department: </strong><%= student.dept %></p>
+      </div>
+      <div style="padding-left:10px;"  class="">
+         <a href="/students/<%= student._id %>/edit" class="ui primary button">Edit</a>
+         <form style="display:inline;" id="delete" action="/students/<%= student._id %>?_method=DELETE" method="POST">
+            <button  class="ui red button">Delete</button>
+         </form>
+         <a class="ui right labeled icon button" href="/students">Home <i class="left arrow icon"></i></a>
+      </div>
+   </div>
+</div>
